@@ -2,9 +2,12 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
+  "main": "main.cjs",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "electron": "electron .",
+    "start": "concurrently \"vite\" \"npm run electron\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

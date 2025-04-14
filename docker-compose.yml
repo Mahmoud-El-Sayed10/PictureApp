@@ -26,7 +26,7 @@ services:
   chat-server:
     build: ./chat-server
     ports:
-      - "3001:3001"
+      - "3002:3001"
     restart: always
 
 volumes:
