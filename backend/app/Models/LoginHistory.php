@@ -14,6 +14,9 @@ class LoginHistory extends Model
         'user_id',
         'ip_address',
         'user_agent',
+        'city',
+        'country_iso_code',
+        'country_name',   
         'login_at',
     ];
 
