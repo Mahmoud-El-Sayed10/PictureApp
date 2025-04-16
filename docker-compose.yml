@@ -1,9 +1,7 @@
-
-
 services:
   laravel:
     build:
-      context: /home/mahmoud/PictureApp/backend
+      context: ./backend
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
@@ -27,6 +25,12 @@ services:
     build: ./chat-server
     ports:
       - "3002:3001"
+    environment:
+      LARAVEL_API_URL: "http://laravel:8000"
+      LARAVEL_API_TOKEN: "SOME_SERVICE_TOKEN"
+    depends_on:
+      - laravel
+      - mysql
     restart: always
 
 volumes:

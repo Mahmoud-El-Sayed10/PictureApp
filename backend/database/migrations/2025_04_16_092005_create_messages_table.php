@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('login_histories', function (Blueprint $table) {
+        Schema::create('messages', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('login_at');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->text('content');
             $table->timestamps();
-
-            $table->foreignId("user_id")->constrained()->onDelete('cascade');
-            $table->string('ip_address')->nullable();
-            $table->string('user_agent')->nullable();
         });
     }
 
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('login_histories');
+        Schema::dropIfExists('messages');
     }
 };

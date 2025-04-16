@@ -1,0 +1,12 @@
+.homepage-container {
+    padding: 20px 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.homepage-container>.search-bar-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
