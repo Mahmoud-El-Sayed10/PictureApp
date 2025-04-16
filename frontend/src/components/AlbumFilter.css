@@ -1,0 +1,38 @@
+    .album-filter-container {
+        margin-bottom: 25px;
+        text-align: left;
+    }
+    
+    .album-filter-title {
+        margin-bottom: 10px;
+        font-size: 1.4em;
+        color: #444;
+    }
+    
+    .album-filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; 
+    }
+    
+    .album-filter-button {
+        padding: 8px 18px;
+        border: none;
+        border-radius: 15px;
+        background-color: #e0e0e0;
+        color: #555;
+        cursor: pointer;
+        font-size: 0.95em;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    
+    .album-filter-button:hover {
+        background-color: #d1d1d1;
+    }
+    
+    .album-filter-button.active {
+        background-color: #6c757d;
+        color: white;
+        font-weight: 500;
+    }
+    

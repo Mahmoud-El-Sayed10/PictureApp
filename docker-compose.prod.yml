@@ -21,6 +21,12 @@ services:
     image: pictureapp-chat
     ports:
       - "3001:3001"
+    environment:
+      LARAVEL_API_URL: "http://laravel:8000"
+      LARAVEL_API_TOKEN: "SOME_SERVICE_TOKEN"
+    depends_on:
+      - laravel
+      - mysql
 
 volumes:
   mysql_data:
